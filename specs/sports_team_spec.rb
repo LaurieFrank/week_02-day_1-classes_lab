@@ -11,7 +11,7 @@ class TestTeam < Minitest::Test
 
   def test_get_players
     team = Team.new("The Super Confused Team", 12, "Zsolt")
-    assert_equal(12, team.players())
+    assert_equal(["David", "Laurie", "George"], team.players())
   end
 
   def test_get_coach_name
@@ -27,9 +27,15 @@ class TestTeam < Minitest::Test
 
   def test_add_new_player
     team = Team.new("The Super Confused Team", 12, "Zsolt")
-    team.add_new_player(1)
-    assert_equal(13, team.players)
+    team.add_new_player("John")
+    assert_equal(["David", "Laurie", "George", "John"], team.players)
   end
+
+  # def test_check_player_name
+  #   team = Team.new("The Super Confused Team", 12, "Zsolt")
+  #   team.check_player_name = "George"
+  #   assert_equal(true, team.check_player_name(true))
+  # end
 
 
 end

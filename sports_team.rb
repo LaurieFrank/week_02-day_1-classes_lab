@@ -2,9 +2,9 @@ class Team
 
 attr_accessor(:team_name, :players, :coach)
 
-  def initialize(input_team_name, input_players, input_coach)
+  def initialize(input_team_name, players, input_coach)
     @team_name = input_team_name
-    @players = input_players
+    @players = ["David", "Laurie", "George"]
     @coach = input_coach
   end
 
@@ -13,7 +13,8 @@ attr_accessor(:team_name, :players, :coach)
   # end
 
   # def get_players
-  #   return @players
+  #   p @players
+  #   # return @players
   # end
   #
   # def get_coach_name
@@ -24,7 +25,15 @@ attr_accessor(:team_name, :players, :coach)
   #   @coach = new_name
   # end
 
-  def add_new_player(amount)
-    @players += amount
+  def add_new_player(name)
+    @players.push(name)
   end
+
+
+  # def check_player_name(name)
+  #   if @players == name
+  #     return true
+  #   end
+  # end
+
 end
