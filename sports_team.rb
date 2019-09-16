@@ -23,4 +23,8 @@ attr_accessor(:team_name, :players, :coach)
   # def set_update_coach_name(new_name)
   #   @coach = new_name
   # end
+
+  def add_new_player(amount)
+    @players += amount
+  end
 end
