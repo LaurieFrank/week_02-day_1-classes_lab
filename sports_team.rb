@@ -6,6 +6,7 @@ attr_accessor(:team_name, :players, :coach)
     @team_name = input_team_name
     @players = ["David", "Laurie", "George"]
     @coach = input_coach
+    @points = 0
   end
 
   # def get_team_name
@@ -31,9 +32,17 @@ attr_accessor(:team_name, :players, :coach)
 
 
   # def check_player_name(name)
-  #   if @players == name
+  #   if @players[] == name
   #     return true
   #   end
   # end
+
+  def update_points(score)
+    result = {
+      "win" => 1,
+      "lose" => 0
+    }
+  end
+
 
 end
