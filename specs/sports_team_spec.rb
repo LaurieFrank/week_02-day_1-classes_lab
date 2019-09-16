@@ -19,4 +19,9 @@ class TestTeam < Minitest::Test
     assert_equal("Zsolt", team.get_coach_name())
   end
 
+  def test_update_coach_name
+    team = Team.new("The Super Confused Team", "12", "Zsolt")
+    team.set_update_coach_name("Harrison")
+    assert_equal("Harrison", team.get_coach_name)
+  end
 end
